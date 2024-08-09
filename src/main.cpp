@@ -1,5 +1,5 @@
-//
-// Created by nefty on 8/9/2024.
-//
+#include <iostream>
 
-#include "main.h"
+int main() {
+	std::cout << "Program starting" << std::endl;
+}
