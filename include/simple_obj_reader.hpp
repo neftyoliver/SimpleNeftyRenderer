@@ -26,21 +26,17 @@ namespace simple_obj {
 
     public:
         explicit Model(const std::string& fileName) {
-
             std::ifstream file;
-            uint64_t xyz = 0; // x:0, y:1, z:2
             uint64_t file_size = 0;
 
             auto rawData = std::vector<std::string>();
-            auto rawSingleLine = std::string();
-
-            float element_value = 0.0F;
 
             file.open(fileName.c_str());
 
             assert(file.is_open());
 
             while(!file.eof()) {
+                auto rawSingleLine = std::string();
                 std::getline(file, rawSingleLine);
                 rawData.push_back(rawSingleLine);
                 file_size += 1;
@@ -54,6 +50,8 @@ namespace simple_obj {
             uint32_t currentLine = 0;
             uint32_t curser = 0;
             uint32_t selection_start = 0;
+            uint64_t xyz = 0; // x:0, y:1, z:2
+            float element_value = 0.0F;
 
             for(auto dataSingleLine : rawData) {
 
