@@ -5,13 +5,12 @@ project(SimpleNeftyRenderer)
 add_executable(
         SimpleRenderer
 
-        include/program.h
-        include/obj_file.h
+        include/simple_obj_reader.hpp
+        include/program_global.hpp
 
         src/main.cpp
         src/program.cpp
         src/renderer.cpp
-        src/obj_file.cpp
 
 
 )
