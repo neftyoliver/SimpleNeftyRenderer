@@ -6,4 +6,5 @@ int main() {
 	std::cout << "Program starting" << std::endl;
 
 	simple_obj::Model model("UtahTeapot.obj");
+
 }
